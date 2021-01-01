@@ -1,0 +1,12 @@
+.header {
+	display: inline-block; 
+	width: 100%;
+  }
+  .card-ui {
+	background: #e0b0c9;
+	margin: 15px 0;
+	padding: 15px;
+	border: 1px solid green;
+	color: #fff;
+	height:55px;
+}
