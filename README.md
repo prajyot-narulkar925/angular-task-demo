@@ -19,7 +19,7 @@ Below is a screenshot of the project after phase one:
 | Add card | Asks user to enter a title for the card | 'Add card' button pushes card to list |
 
 ### Secondary Features & Functionality
-| Feature | Description | Notes |
+| Feature | Description 
 |--|--|--|
 | Dragging items | Users to drag cards
 
