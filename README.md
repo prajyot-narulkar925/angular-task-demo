@@ -14,13 +14,12 @@ Below is a screenshot of the project after phase one:
 ### Necessary Features & Functionality
 | Feature | Description | Notes |
 |--|--|--|
-| New board | Main view: Display as if a user had created a new, empty board | Default colors. Could possibly include a pre-built board for demo purposes |
 | New list | Create new list when user clicks button | Ask for the list name before creating |
 | Add card | Asks user to enter a title for the card | 'Add card' button pushes card to list |
 
 ### Secondary Features & Functionality
-| Feature | Description 
-|--|--|--|
+| Feature | Description | 
+|--|--|
 | Dragging items | Users to drag cards
 
 ### Component Tree
