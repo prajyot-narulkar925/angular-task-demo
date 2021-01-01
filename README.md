@@ -49,7 +49,7 @@ trello-clone
 ```
 
 # _Installation for OSX_
-- Download the repository from GitHub (https://github.com/PRAJYOT25/angular-TrelloCards)
+- Download the repository from GitHub (https://github.com/prajyotNarulkar925/angular-task-demo)
 - Install Node.js on your machine
 - `npm install` to install all necessary packages
 - `ng serve --open` to run the application in your browser
