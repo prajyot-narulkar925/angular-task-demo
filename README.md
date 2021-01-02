@@ -16,6 +16,7 @@ Below is a screenshot of the project after phase one:
 |--|--|--|
 | New list | Create new list when user clicks button | Ask for the list name before creating |
 | Add card | Asks user to enter a title for the card | 'Add card' button pushes card to list |
+| Theme Switch | Aslloow the user to switch between themes | 'Change Theme' button changes the theme |
 
 ### Secondary Features & Functionality
 | Feature | Description | 
@@ -31,21 +32,30 @@ trello-clone
 │       │   app.component.html
 │       │   app.component.spec.ts
 │       │   app.module.ts
-│       └───board
-|              │   board.component.css
-│              │   board.component.html
-│              │   board.component.spec.ts
-│              │   board.component.ts
-│       └───list
-|              │   list.component.css
-│              │   list.component.html
-│              │   list.component.spec.ts
-│              │   list.component.ts
-│       └───card
-|              │   card.component.css
-│              │   card.component.html
-│              │   card.component.spec.ts
-│              │   card.component.ts
+│       └───LandingPageComponents
+|             └───board
+|                   │   board.component.css
+│                   │   board.component.html
+│                   │   board.component.spec.ts
+│                   │   board.component.ts
+│             └───list
+|                   │   list.component.css
+│                   │   list.component.html
+│                   │   list.component.spec.ts
+│                   │   list.component.ts
+│             └───card
+|                   │   card.component.css
+│                   │   card.component.html
+│                   │   card.component.spec.ts
+│                   │   card.component.ts
+|         └───Services
+|                |    mock-data.service.ts
+|                |    mock-data.service.spec.ts
+|         └───Themes
+|                │   theme.module.ts
+│                │   theme.service.spec.ts
+│                │   theme.service.ts
+│                │   theme.ts                
 ```
 
 # _Installation for OSX_
