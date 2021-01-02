@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CardStore } from '../CardStore';
-import { ListSchema } from '../ListSchema';
+import { CardStore } from './../../cardstore';
+import { ListSchema } from './../../listschema';
 import Swal from 'sweetalert2'
+import { MockDataService } from './../../service/mock-data.service';
 
 @Component({
   selector: 'app-board',
@@ -11,27 +12,10 @@ import Swal from 'sweetalert2'
 export class BoardComponent implements OnInit {
   cardStore: CardStore;
   lists: ListSchema[];
-  constructor() { }
+  constructor(private mockDataService:MockDataService) { }
   setMockData(): void {
     this.cardStore = new CardStore();
-    const lists: ListSchema[] = [
-      {
-        id:0,
-        name: 'To Do',
-        cards: []
-      },
-      {
-        id:1,
-        name: 'In Progress',
-        cards: []
-      },
-      {
-        id:2,
-        name: 'Done',
-        cards: []
-      }
-    ]
-    this.lists = lists;
+    this.lists = this.mockDataService.getItemList();
   }
 
   ngOnInit() {
@@ -45,7 +29,7 @@ export class BoardComponent implements OnInit {
       input: 'text',
       showCancelButton: true        
   }).then((result) => {
-      if (result.value) {
+      if (result.value !="" && result.value !=null) {
         const found = this.lists.some(el => el.name === result.value);
             if(!found){
                 var obj = {
@@ -58,12 +42,15 @@ export class BoardComponent implements OnInit {
               else{
                 Swal.fire(
                   "List Name already present!"
-                );
+                ).then();
               }
+      } else if(result.value != undefined){
+        Swal.fire(
+          "List Name is required!"
+        ).then();
       }
   });
   }
-
 
   deleteItem(id){
     Swal.fire({
@@ -86,16 +73,20 @@ export class BoardComponent implements OnInit {
           'Deleted!',
           'Your data has been deleted.',
           'success'
-        )
+        ).then();
 
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         Swal.fire(
           'Cancelled',
           'Your data is safe :)',
           'error'
-        )
+        ).then();
       }
     })
 
+  }
+
+  allowDrop($event) {
+    $event.preventDefault();
   }
 }

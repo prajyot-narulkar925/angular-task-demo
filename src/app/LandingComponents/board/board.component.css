@@ -1,0 +1,32 @@
+.card-section {
+    display: flex;
+    padding: 0 5px;
+    flex-wrap: wrap;
+  }
+  .position-btn{
+    margin:1%;
+    background-color: var(--primary-btn-color);
+    color:var(--background-light);
+  }
+  .mobile-css{
+    display: block;
+    margin:10px 5px;
+  }
+  .bgColor{
+    background: var(--background-default);
+    height:100vh;
+    margin-top: -1%;
+  }
+  @media only screen and (max-width: 600px) {
+    .card-section {
+      flex-direction: column;
+      padding: 0px;
+    }
+    .mobile-css{
+      text-align: center;
+    }
+    .bgColor{
+      height:auto;
+      margin-top:-3%;
+    }
+  }

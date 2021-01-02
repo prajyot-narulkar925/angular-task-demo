@@ -1,0 +1,27 @@
+.header {
+	display: inline-block; 
+	width: 100%;
+  }
+  .card-ui {
+	background: var(--primary-card-item);
+	margin: 15px 0;
+	padding: 15px;
+	border: 1px solid green;
+	color: #fff;
+	height:55px;
+}
+input{
+	min-width:20%;
+	width: 26vw;
+	display:flex;
+	padding: 3px;
+	border: 1px solid violet;
+	outline: 0;
+	background: #fff;
+	box-shadow:none;
+}
+@media only screen and (max-width: 600px) {
+	input {
+		width: 90vw;
+	}
+  }

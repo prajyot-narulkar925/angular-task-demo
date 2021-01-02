@@ -1,0 +1,13 @@
+
+<div class="card-ui" draggable="true" (dragstart)="dragStart($event)" id="{{card.id}}">
+    <span class="float-left" *ngIf="!displayCardTitle">
+        {{card.description}}
+    </span>
+	<input #cardtitle type="text" [value] = "card.description" (keyup.enter)="onUpdateTitle(cardtitle.value,card.id); cardtitle.value=''; displayCardTitle=false;" *ngIf="displayCardTitle" autofocus>
+
+    <span class="float-right" *ngIf="!displayCardTitle">
+        <i class="fa fa-trash" aria-hidden="true" (keyup.enter)="deleteItem(card.id)" (click)="deleteItem(card.id)"></i>
+        <i class="fa fa-pencil pl-3" aria-hidden="true" (keyup.enter)="displayCardTitle=true" (click)="displayCardTitle=true"></i>
+
+    </span>
+  </div>

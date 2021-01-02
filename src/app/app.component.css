@@ -1,0 +1,19 @@
+nav {
+    height: 4rem;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background: var(--background-secondary);
+    color: var(--background-light);
+    font-size: 1rem;
+  }
+  .theme-btn{
+    padding:10px;
+    display:inline-block;
+    text-decoration: none;
+    background: var(--secondary-btn-color);
+    border-radius: 4px;
+    color:var(--background-light);
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+  }
