@@ -4,9 +4,7 @@
 # _About the App_
 This application showcases my Angular experience by building the problem statment provided!
 
-The first phase will focus on creating the view of a new board, including lists with cards.
-
-Below is a screenshot of the project after phase one:
+Below is a screenshot of the project completed:
 <img src="task_screenshot-01012021.png">
 
 # _Specifications_
