@@ -8,8 +8,10 @@
 	<input #addCardtitle type="text" [value] = "list.name" (keyup.enter)="onUpdateTitle(addCardtitle.value); addCardtitle.value=''; displayCardTitle=false;" *ngIf="displayCardTitle" autofocus>
 
     <span class="float-right" *ngIf="!displayCardTitle">
-        <i class="fa fa-trash" aria-hidden="true" (keyup.enter)="deleteList(list.id)" (click)="deleteList(list.id)"></i>
-        <i class="fa fa-pencil pl-3" aria-hidden="true" (keyup.enter)="displayCardTitle=true" (click)="displayCardTitle=true"></i>
+		<ul>
+            <li><a href="#" (click)="deleteList(list.id)" (keyup.enter)="deleteList(list.id)"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
+            <li><a href="#" (click)="displayCardTitle=true" (keyup.enter)="displayCardTitle=true"><i class="fa fa-pencil " aria-hidden="true" ></i></a></li>
+        </ul>
     </span>
 </div>
 	<div class="cards">
@@ -19,3 +21,4 @@
 	<input #addCardInput type="text" (keyup.enter)="onEnter(addCardInput.value); addCardInput.value=''; displayAddCard=false;" *ngIf="displayAddCard" autofocus>
 	<a href="#" class="list__newcard text-center" (click)="toggleDisplayAddCard();">+ Add a card</a>
 </div>
+<!-- </div> -->

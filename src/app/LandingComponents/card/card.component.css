@@ -20,6 +20,22 @@ input{
 	background: #fff;
 	box-shadow:none;
 }
+ul{
+	display: flex;
+  }
+  ul li{
+	list-style-type: none;
+  }
+  ul li a {
+	display: block;
+	text-align: center;
+	margin :0 10px;
+	border-radius: 15px;
+  }
+  ul li a .fa{
+	font-size: 16px; 
+	color:var(--background-light);
+  }
 @media only screen and (max-width: 600px) {
 	input {
 		width: 90vw;
