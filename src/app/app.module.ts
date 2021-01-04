@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { BoardComponent } from './LandingComponents/board/board.component';
-import { ListComponent } from './LandingComponents/./list/list.component';
-import { CardComponent } from './LandingComponents/./card/card.component';
+import { ListComponent } from './LandingComponents/list/list.component';
+import { CardComponent } from './LandingComponents/card/card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 
@@ -17,7 +17,7 @@ import { MatInputModule } from '@angular/material/input';
     
     BoardComponent,
     ListComponent,
-    CardComponent
+    CardComponent,
   ],
   imports: [
     BrowserModule,

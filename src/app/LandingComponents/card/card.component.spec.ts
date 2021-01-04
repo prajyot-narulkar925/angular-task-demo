@@ -22,4 +22,13 @@ describe('CardComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should emit an event on delete icon click', () => {
+    let eventid = null;
+    component.deleteCardItem.subscribe(eid=> eventid=eid);
+
+    component.deleteItem(1);
+
+    expect(eventid).not.toBeNull();
+  });
 });

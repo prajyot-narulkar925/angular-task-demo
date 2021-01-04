@@ -1,13 +1,13 @@
 
-<div class="card-ui" draggable="true" (dragstart)="dragStart($event)" id="{{card.id}}">
+<div class="card-ui" draggable="true" (dragstart)="dragStart($event)" id="{{card?.id}}">
     <span class="float-left" *ngIf="!displayCardTitle">
-        {{card.description}}
+        {{card?.description}}
     </span>
 	<input #cardtitle type="text" [value] = "card.description" (keyup.enter)="onUpdateTitle(cardtitle.value,card.id); cardtitle.value=''; displayCardTitle=false;" *ngIf="displayCardTitle" autofocus>
 
     <span class="float-right" *ngIf="!displayCardTitle">
 		<ul>
-            <li><a href="#" (keyup.enter)="deleteItem(card.id)" (click)="deleteItem(card.id)"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
+            <li><a href="#" (keyup.enter)="deleteItem(card?.id)" (click)="deleteItem(card?.id)"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
             <li><a href="#" (keyup.enter)="displayCardTitle=true" (click)="displayCardTitle=true"><i class="fa fa-pencil " aria-hidden="true" ></i></a></li>
         </ul>
     </span>

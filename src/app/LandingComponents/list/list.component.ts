@@ -55,6 +55,7 @@ export class ListComponent implements OnInit {
     } else {
       target.appendChild(document.getElementById(data));
     }
+    $event.stopPropagation();
   }
 
   onEnter(value: string) {
@@ -140,9 +141,10 @@ export class ListComponent implements OnInit {
         "List Name is required!"
       ).then();
     }
+
   }
 
-  dragStart(ev) {
+  listdragStart(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
   }
 }

@@ -23,7 +23,5 @@ export class AppComponent {
     } else {
       this.themeService.setDarkTheme();
     }
-
-    // this.setLightbulb();
   }
 }

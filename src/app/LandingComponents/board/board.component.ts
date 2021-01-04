@@ -86,7 +86,31 @@ export class BoardComponent implements OnInit {
 
   }
 
-  allowDrop($event) {
+  listDrop($event) {
     $event.preventDefault();
+  }
+  droplist($event) {
+    $event.preventDefault();
+    const data = $event.dataTransfer.getData("text");
+    let target = $event.target;
+    const targetClassName = target.className;
+    while (target.className !== "card-section") {
+      target = target.parentNode;
+    }
+    target = target.querySelector(".move-card");
+    if (targetClassName === "move-card") {
+      $event.target.parentNode.insertBefore(
+        document.getElementById(data),
+        $event.target
+      );
+    }
+     else if (targetClassName === "move-card") {
+        target.insertBefore(document.getElementById(data), target.children[0]);
+    } else {
+      target.appendChild(document.getElementById(data));
+    }
+  }
+  listdragStart(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
   }
 }
